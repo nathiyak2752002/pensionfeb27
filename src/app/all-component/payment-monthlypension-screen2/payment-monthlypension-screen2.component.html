@@ -1,0 +1,92 @@
+<!-- <div class="container card card1"> -->
+<div class="card1">
+    <div class="row">
+        <div class="col-8"><h2>MONTHLY PENSION</h2></div>
+        <div class="col-2"><button (click)="downloadPDF()" class="exportpdf">Export to PDF</button></div>
+        <div class="col-2">
+            <button class="exportexcel"  (click)="exportToExcel()" style="color: rgb(59, 11, 51); cursor: pointer; border-radius: 10px;">
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                    <path d="M7 11l5 5l5 -5" />
+                    <path d="M12 4l0 12" />
+                  </svg></span>
+                Export to Excel
+            </button>
+        </div>
+    </div>
+    
+        <!-- <div class="row">
+          <div class="col-2 search-container">
+            <div class="search-icon">
+              <input matInput #input type="text" id="search-input" class="search-input" placeholder="Search Emp Id/Name">
+              <mat-icon>search</mat-icon>
+            </div>
+          </div> -->
+          <!-- <div class="col-2">
+            <input class="input form-control" type="text" name="Search" matInput formControlName="filter" >
+          </div> -->
+        <!-- </div> -->
+        
+      
+      <form [formGroup]="settlement">
+        <div class="row">
+            <div class="col-2">
+                <mat-label>Vr.No</mat-label>
+                <input id="vrno" class="input form-control"  type="text" formControlName="vrno" mat-input>
+            </div>   
+            <div class="col-2">
+                <mat-label>Date</mat-label>
+                <input id="date" class="input form-control"  type="date" formControlName="date" mat-input>
+           </div>    
+        </div></form>
+   
+      
+    <div #content class=" card2 tablecolor">
+        <table mat-table  [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef style="border-top-left-radius:20px;border-bottom-left-radius:20px"><span>S.NO</span></th>
+                <td mat-cell *matCellDef="let element">{{element.position}}</td>
+            </ng-container>
+            <ng-container matColumnDef="ppoNo">
+                <th mat-header-cell *matHeaderCellDef><span>PPO No</span></th>
+                <td mat-cell *matCellDef="let element">{{element.ppoNo}}</td>
+            </ng-container>
+            <ng-container matColumnDef="name" >
+                <th mat-header-cell *matHeaderCellDef><span>Name</span></th>
+                <td mat-cell *matCellDef="let element">{{element.name}}</td>
+            </ng-container>
+            <ng-container  matColumnDef="totalPay">
+                <th mat-header-cell *matHeaderCellDef><span>Gross Payable</span></th>
+                <td mat-cell *matCellDef="let element">{{element.totalPay}}</td>
+            </ng-container>
+            <ng-container matColumnDef="totalDeductions">
+                <th mat-header-cell *matHeaderCellDef><span>Deductions</span></th>
+                <td mat-cell *matCellDef="let element">{{element.totalDeductions}}</td>
+            </ng-container>
+            <ng-container matColumnDef="netPayable">
+                <th mat-header-cell *matHeaderCellDef><span>Net Payable</span></th>
+                <td mat-cell *matCellDef="let element">{{element.netPayable}}</td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef style="border-bottom-right-radius: 20px; border-top-right-radius:20px"><span>ACTION</span></th>
+                <td mat-cell *matCellDef="let element">
+                    <a><mat-icon  >update</mat-icon></a>
+                    <mat-icon style="margin-left: 5px;" >visibility</mat-icon>
+                </td>
+            </ng-container>
+            
+            <tr mat-header-row  *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>
+<div class="container">
+    <div style="display: flex; margin-top: 20px;justify-content: center;">
+        <section><button routerLink="/pension/payment-monthlypension" class="backbutton">BACK</button></section>
+        <section><button class="submit" style="margin-left:10px">submit</button></section>
+    </div>
+</div>
+
+
+<main></main>

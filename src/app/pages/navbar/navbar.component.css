@@ -1,0 +1,123 @@
+
+mat-sidenav {
+    background-color:#470A3C;
+    width: 16%;
+    color: #ccc;
+}
+mat-nav-list button{
+  color: white;
+}
+ul{
+  position: absolute;
+  right:0;
+  list-style: none;
+  display: flex;
+  padding: 40PX;
+  align-items: center;
+  margin-left: 15px;
+  margin-top: 25px;
+}
+.searchbox{
+margin: 5px;
+}
+.size{
+  height: 30px;
+  width: 50px;
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: flex-start; 
+  font-size: 15px;
+  
+
+}
+
+.search-input
+{
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    background-color: #F6F8FA;
+    
+}
+
+.example-toolbar{
+  height: 90px;
+  background-color: #ffffff;
+}
+.search-icon  mat-icon {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  display: flex;
+}
+.custom-expansion-panel {
+    background-color:#470A3C;
+    color: #ccc;
+}
+.custom-expansion-panel mat-panel-title {
+  color: white;
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+.example-sidenav-container {
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  flex: 1 0 auto;
+}
+example-spacer {
+  flex: 1 1 auto;
+}
+
+.main-content {
+  background-color: #FFFAF4;
+}
+
+mat-sidenav {
+  /* background-color: #470A3C; */
+  background-color: #470A3C;
+
+
+  width: 15%;
+}
+
+/* mat-nav-list button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+} */
+
+:host ::ng-deep .mdc-button__label,
+mat-nav-list button mat-icon {
+  color: #F6F4EB;
+}
+
+mat-nav-list button:hover {
+  background-color: #A3849D;
+}
+
+.active {
+  background-color: #A3849D;
+}

@@ -1,0 +1,319 @@
+<div class="container">
+  <h2 class="pernsioners">PART - I DETAILS OF PENSIONERS </h2>
+  <form [formGroup]="pensioner">
+
+    <div class="row">
+
+      <div class="col-2">
+        <mat-label>EMP ID</mat-label>
+        <input id="empid" class="input form-control" type="text" formControlName="empid" mat-input readonly>
+      </div>
+      <!-- <div class="col">
+        <button class="fetch">fetch data</button>
+      </div> -->
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>Emp Name</mat-label>
+        <input id="empname" class="input form-control" type="text" formControlName="empname" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Designation</mat-label>
+        <input id="designation" class="input form-control" type="text" formControlName="designation" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Last place of working</mat-label>
+        <input id="workingPlace" class="input form-control" type="text" formControlName="workingPlace" mat-input
+          readonly>
+      </div>
+      <div class="col">
+        <mat-label>DOB</mat-label>
+        <input id="dob" class="input form-control" type="text" formControlName="dob" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>DOA</mat-label>
+        <input id="doa" class="input form-control" type="text" formControlName="doa" mat-input readonly>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>Date of Retirement / Death</mat-label>
+        <input id="retirementDate" class="input form-control" type="text" formControlName="retirementDate" mat-input
+          readonly>
+      </div>
+      <div class="col">
+        <mat-label>Age</mat-label>
+        <input id="age" class="input form-control" type="text" formControlName="age" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Type of Pension</mat-label>
+        <input id="pensionType" class="input form-control" type="text" formControlName="pensionType" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Type of Retirement</mat-label>
+        <input id="retirementType" class="input form-control" type="text" formControlName="retirementType" mat-input
+          readonly>
+      </div>
+      <div class="col">
+        <mat-label>Name of the Spouse</mat-label>
+        <input id="spouseName" class="input form-control" type="text" formControlName="spouseName" mat-input readonly>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>DoB of spouse</mat-label>
+        <input id="spouseDob" class="input form-control" type="text" formControlName="spouseDob" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Address</mat-label>
+        <input id="address" class="input form-control" type="text" formControlName="address" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Mobile No</mat-label>
+        <input id="mobileNo" class="input form-control" type="text" formControlName="mobileNo" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Email ID</mat-label>
+        <input id="emailNo" class="input form-control" type="text" formControlName="emailNo" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>PAN No</mat-label>
+        <input id="panNo" class="input form-control" type="text" formControlName="panNo" mat-input readonly>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>Aadhar No</mat-label>
+        <input id="aadharNo" class="input form-control" type="text" formControlName="aadharNo" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Bank Acct no</mat-label>
+        <input id="bankAcctNo" class="input form-control" type="text" formControlName="bankAcctNo" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Bank Branch</mat-label>
+        <input id="bankBranch" class="input form-control" type="text" formControlName="bankBranch" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Bank IFSC</mat-label>
+        <input id="ifsc" class="input form-control" type="text" formControlName="ifsc" mat-input readonly>
+      </div>
+
+      <div class="col">
+      </div>
+    </div>
+  </form>
+
+  <h2 class="pensiondetails">
+    PART - II PENSION DETAILS
+  </h2>
+  <form [formGroup]="pensionStatus">
+    <div class="row">
+      <div class="col">
+        <mat-label>PF NO</mat-label>
+        <input id="pfno" class="input form-control" type="number" formControlName="pfno" mat-input readonly>
+      </div>
+      <div class="col">
+        <mat-label>Pension status</mat-label>
+        <input id="pensionStatus" class="input form-control" type="text" formControlName="pensionStatus" mat-input>
+      </div>
+      <div class="col">
+        <mat-label>Portion of Commutation</mat-label>
+        <input id="commutationPortion" class="input form-control" type="text" formControlName="commutationPortion"
+          mat-input>
+      </div>
+      <div class="col">
+        <mat-label>Date of Comm.Commencement</mat-label>
+        <input id="dateCommencement" class="input form-control" type="text" formControlName="dateCommencement"
+          mat-input>
+      </div>
+      <div class="col">
+        <mat-label>Date of Reduced Pension (30%) </mat-label>
+        <input id="dateReduced" class="input form-control" type="text" formControlName="dateReduced" mat-input>
+      </div>
+      <div class="col">
+        <mat-label>Recovery Instal No</mat-label>
+        <input id="recoveryInstal" class="input form-control" type="text" formControlName="recoveryInstal" mat-input>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-label>Original Pension</mat-label>
+        <input id="originalPension" class="input form-control" type="tel" formControlName="originalPension" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>Basic Pension</mat-label>
+        <input id="basicPension" class="input form-control" type="tel" formControlName="basicPension" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>Additional Pension</mat-label>
+        <input id="additionalPension" class="input form-control" type="tel" formControlName="additionalPension"
+          mat-input (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>Commuted Pension</mat-label>
+        <input id="commutedPension" class="input form-control" type="tel" formControlName="commutedPension" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>Pension payable</mat-label>
+        <input id="pensionPayable" class="input form-control" type="tel" formControlName="pensionPayable" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>DA</mat-label>
+        <input id="da" class="input form-control" type="tel" formControlName="da" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>MA</mat-label>
+        <input id="ma" class="input form-control" type="tel" formControlName="ma" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col">
+        <mat-label>GROSS PENSION</mat-label>
+        <input id="gross" class="input form-control" type="tel" formControlName="gross" mat-input readonly>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <mat-label>Family Security Fund</mat-label>
+        <input id="securityFund" class="input form-control" type="tel" formControlName="securityFund" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>FA</mat-label>
+        <input id="fa" class="input form-control" type="tel" formControlName="fa" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>Fest. Adv Recovery</mat-label>
+        <input id="advRecovery" class="input form-control" type="tel" formControlName="advRecovery" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>Misc</mat-label>
+        <input id="misc" class="input form-control" type="tel" formControlName="misc" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>Misc recovery</mat-label>
+        <input id="miscRecovery" class="input form-control" type="tel" formControlName="miscRecovery" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>NHIS</mat-label>
+        <input id="nhis" class="input form-control" type="tel" formControlName="nhis" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+      <div class="col">
+        <mat-label>TDS</mat-label>
+        <input id="tds" class="input form-control" type="tel" formControlName="tds" mat-input
+          (keyup)="grossPensionCalc()">
+      </div>
+    </div>
+
+
+    <div class="row">
+
+
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col">
+        <mat-label>Net Pension</mat-label><input id="netPension" class="input form-control" type="tel"
+          formControlName="netPension" mat-input readonly>
+      </div>
+    </div>
+  </form>
+
+  <!-- <div *ngIf="selectedTrial === 'trial1'">
+  <form [formGroup]="trialForm1">
+    <div class="row">
+      <div class="col">
+        <mat-label>name1</mat-label>
+        <input id="name1" class="input form-control"  formControlName="name1"   type="text" mat-input>
+      </div>
+      <div class="col">
+        <mat-label>password1</mat-label>
+        <input id="password1" class="input form-control"  formControlName="password1"   type="text" mat-input>
+      </div>
+    </div>
+    </form></div>
+   
+<div *ngIf="selectedTrial === 'trial2'"><form [formGroup]="trialForm2">
+  <div class="row">
+    <div class="col">
+      <mat-label>name2</mat-label>
+      <input id="name2" class="input form-control"  formControlName="name2"   type="text" mat-input>
+    </div>
+    <div class="col">
+      <mat-label>password2</mat-label>
+      <input id="password2" class="input form-control"  formControlName="password2"   type="text" mat-input>
+    </div>
+  </div>
+
+</form></div>
+  
+
+<div *ngIf="selectedTrial === 'trial3'">
+  <form [formGroup]="trialForm3">
+    <div class="row">
+      <div class="col">
+        <mat-label>name3</mat-label>
+        <input id="name3" class="input form-control"  formControlName="name3"   type="text" mat-input>
+      </div>
+      <div class="col">
+        <mat-label>password3</mat-label>
+        <input id="password3" class="input form-control"  formControlName="password3"   type="text" mat-input>
+      </div>
+    </div>
+  
+ </form></div> -->
+
+
+
+
+
+
+
+
+
+
+  <!-- <div style="display: flex;  justify-content: center;">
+        <section><button class="backbutton" routerLink="/pension/personaldetails">Back</button></section>
+        <section><button class="discard">Discard</button></section>
+        <section><button class="next" routerLink="/pension/ongoing-pension-input">Next</button></section>
+    </div> -->
+
+
+  <div class="container">
+    <div style="display: flex; margin-top: 20px;justify-content: center;">
+      <section><button class="backbutton" routerLink="/pension/personaldetails" (click)="back()">BACK</button></section>
+      <section><button class="submit" (click)="submit()" style="margin-left:10px">submit</button></section>
+    </div>
+  </div>
+
+
+
+
+
+  <main></main>

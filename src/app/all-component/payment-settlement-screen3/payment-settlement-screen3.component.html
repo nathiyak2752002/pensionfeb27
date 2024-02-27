@@ -1,0 +1,171 @@
+
+<div class="container card1">
+    <h2>SETTLEMENT</h2>
+    <form [formGroup]="settlement">
+    <div class="row">
+        <div class="col-2">
+            <mat-label>PPO</mat-label>
+            <input id="ppo" class="input form-control" type="text" formControlName="ppo"  mat-input>
+        </div>
+        <div class="col-2"><button class="fetch">fetch</button></div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <mat-label>Name</mat-label>
+            <input id="name" class="input form-control" formControlName="name" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Designation</mat-label>
+            <input id="designation"    class="input form-control" formControlName="designation" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>last place of working</mat-label>
+            <input id="workingPlace" class="input form-control" formControlName="workingPlace" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>DOA</mat-label>
+            <input  id="doa"  class="input form-control"  formControlName="doa" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>DOR/Death</mat-label>
+            <input id="dor" class="input form-control" formControlName="dor"  mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Age</mat-label>
+            <input id="age"  class="input form-control" formControlName="age" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Arrear start date</mat-label>
+            <input id="arrearStart"  class="input form-control" formControlName="arrearStart" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Arrear end date</mat-label>
+            <input id="arrearEnd" class="input form-control" formControlName="arrearEnd" mat-input >
+        </div>
+
+    </div>
+    <div class="row">
+       
+        <div class="col">
+            <mat-label>Basic pension</mat-label>
+            <input id="basicPension" class="input form-control"  formControlName="basicPension" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Additional Pension</mat-label>
+            <input  id="additionalPension" class="input form-control"  formControlName="additionalPension"  mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Commuted value</mat-label>
+            <input  id="commutedValue"  class="input form-control" formControlName="commutedValue"  mat-input >
+        </div>
+
+    </div>
+    <div class="row">
+       
+        <div class="col">
+            <mat-label>Pension Payable</mat-label>
+            <input  id="pensionPayable"  class="input form-control"  formControlName="pensionPayable" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>DA</mat-label>
+            <input id="da" class="input form-control" formControlName="da" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>MA</mat-label>
+            <input id="ma" class="input form-control"  formControlName="ma"  mat-input >
+        </div>
+        <!-- <div class="col"></div> -->
+
+    </div>
+    <div class="row">
+       
+        <div class="col">
+          
+        </div>
+        <div class="col">
+        
+        </div>
+        <div class="col">
+            <mat-label>Gross Pension</mat-label>
+            <input id="grossPension" class="input form-control"  formControlName="grossPension" mat-input >
+        </div>
+        
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <mat-label>DCRG amount</mat-label>
+            <input  id="dcrg" class="input form-control"  formControlName="dcrg" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>commutation amount</mat-label>
+            <input  id="commutationAmount" class="input form-control"  formControlName="commutationAmount" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Recovery 1</mat-label>
+            <input  id="recoveryOne"  class="input form-control" formControlName="recoveryOne" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Recovery 2</mat-label>
+            <input  id="recoveryTwo" class="input form-control"  formControlName="recoveryTwo" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Recovery 3</mat-label>
+            <input id="recoveryThree" class="input form-control" formControlName="recoveryThree" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Recovery 4</mat-label>
+            <input id="recoveryFour" class="input form-control" formControlName="recoveryFour" mat-input >
+        </div>
+        <div class="col">
+            <mat-label>Recovery 5</mat-label>
+            <input id="recoveryFive" class="input form-control" formControlName="recoveryFive" mat-input >
+        </div>
+
+    </div>
+    <div class="row">
+       
+        <div class="col">
+      
+        </div>
+        <div class="col">
+           
+        </div>
+        <div class="col">
+          
+        </div>
+       
+        <div class="col">
+            <mat-label>Total Deductions</mat-label>
+            <input id="totalDeduction" class="input form-control" formControlName="totalDeduction" mat-input >
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+          
+        </div>
+       
+       
+        <div class="col">
+           
+        </div>
+        <div class="col">
+          
+        </div>
+      
+        <div class="col">
+            <mat-label>Net Payable</mat-label>
+            <input id="netPayable" class="input form-control" formControlName="netPayable"  mat-input >
+        </div>
+
+    </div>
+</form>
+</div>
+<div class="container">
+    <div style="display: flex; margin-top: 20px;justify-content: center;">
+        <section><button routerLink="/pension/payment-settlement-screen2" class="backbutton">BACK</button></section>
+        <section><button class="submit" style="margin-left:10px">submit</button></section>
+    </div>
+</div>
+<main></main>

@@ -1,0 +1,92 @@
+main{
+    width: 100%;
+    height: 100vh;
+}
+.card1{
+   margin-top: -0.5px;
+    margin-right:10px;
+    margin-left:10px;
+}
+
+
+.filter-row {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: left;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  .search-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .search-icon {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .search-icon input {
+    padding: 0.5rem 2rem 0.5rem 1rem; 
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    background-color: #f6f8fa;
+  }
+  
+  .search-icon mat-icon {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+  }
+  .updatebutton{
+    padding: 5px;
+    background-color: #470A3C ;
+    border-radius: 1rem;
+    color:white;
+   
+  }
+  .exportexcel{
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.exportpdf{
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.col-md-9 .pensionralign {
+    font-size: 25px;
+    font-weight: 500px;
+   font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+.tablecolor th {
+    background-color:#470A3C;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+.nextbutton{
+  padding: 0.5rem 1rem;
+  background-color: #470A3C ;
+  border-radius: 1rem;
+  color:white;
+  margin-top: 50px;
+  margin-left: 80%;
+  
+}
+
+  
+  
+  .search-icon input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: #f6f8fa;
+  } 

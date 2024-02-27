@@ -1,0 +1,228 @@
+<div class="container">
+<h2 class="arrear">Arrear Details</h2>
+<form [formGroup]="arrear">
+<div class="row">
+    <div class="col">
+        <mat-label>PPO NO</mat-label>
+        <input id="ppoNo" class="input form-control" formControlName="ppoNo" type="text" mat-input>
+    </div>
+    <div class="col-1">
+        <button style="margin-left:10px" class="fetch">Fetch</button>
+    </div>
+    <div class="col">
+        <mat-label>Name</mat-label>
+        <input id="name" class="input form-control" formControlName="name" type="text" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Designation</mat-label>
+        <input id="designation" class="input form-control" formControlName="designation" type="text" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Office Code</mat-label>
+        <input id="officeCode" class="input form-control" formControlName="officeCode" type="text" mat-input>
+    </div>
+
+   
+    <div class="col">
+        <mat-label>DOB</mat-label>
+        <input id="dob" class="input form-control" formControlName="dob" type="date" mat-input>
+    </div>
+</div>  
+<div class="row">
+    <div class="col">
+        <mat-label>DOA</mat-label>
+        <input id="doa" class="input form-control" formControlName="doa" type="text" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>DOR</mat-label>
+        <input id="dor" class="input form-control" formControlName="dor" type="text" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>DOD</mat-label>
+        <input id="dod" class="input form-control" formControlName="dod" type="text" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>AGE</mat-label>
+        <input id="age" class="input form-control" formControlName="age" type="text" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Arrear Start Date</mat-label>
+        <input id="arrearStartDate" class="input form-control" formControlName="arrearStartDate" type="text" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Arrear End Date</mat-label>
+        <input id="arrearEndDate" class="input form-control" formControlName="arrearEndDate" type="text" mat-input>
+    </div>
+</div>
+
+    
+<div class="row">
+    <div class="col-1">
+       <h2 style="margin-top:30px">DUES:</h2> 
+    </div>
+    <div class="col">
+        <mat-label>Basic Pension</mat-label>
+        <input  id="duesBasicPension" class="input form-control" type=text  formControlName="duesBasicPension" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Commuted Pension</mat-label>
+        <input  id="duesCommutedPension" class="input form-control" type=text  formControlName="duesCommutedPension" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Additional Pension</mat-label>
+        <input  id="duesAdditionalPension" class="input form-control" type=text  formControlName="duesAdditionalPension" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Pension Payable</mat-label>
+        <input  id="pensionPayable" class="input form-control" type=text  formControlName="pensionPayable" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>DA</mat-label>
+        <input  id="duesDa" class="input form-control" type=text  formControlName="duesDa" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>MA</mat-label>
+        <input  id="duesMa" class="input form-control" type=text  formControlName="duesMa" mat-input>
+    </div>
+    <div class="col-2">
+        <mat-label>Total Dues</mat-label>
+        <input  id="totalDues" class="input form-control" type=text  formControlName="totalDues" mat-input>
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+       <h2 style="margin-top:30px">DRAWN:</h2> 
+    </div>
+    <div class="col">
+        <mat-label>Basic Pension</mat-label>
+        <input  id="drawnBasicPension" class="input form-control" type=text  formControlName="drawnBasicPension" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Commuted Pension</mat-label>
+        <input  id="drawnCommutedPension" class="input form-control" type=text  formControlName="drawnCommutedPension" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Additional Pension</mat-label>
+        <input  id="drwanAdditionalPension" class="input form-control" type=text  formControlName="drwanAdditionalPension" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Pension Payable</mat-label>
+        <input  id="drawnPensionPayable" class="input form-control" type=text  formControlName="drawnPensionPayable" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>DA</mat-label>
+        <input  id="drawnDa" class="input form-control" type=text  formControlName="drawnDa" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>MA</mat-label>
+        <input  id="DrawnMa" class="input form-control" type=text  formControlName="DrawnMa" mat-input>
+    </div>
+    <div class="col-2">
+        <mat-label>Total Drawn</mat-label>
+        <input  id="drawnTotal" class="input form-control" type=text  formControlName="drawnTotal" mat-input>
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+       
+    </div>
+    <div class="col">
+       
+    </div>
+    <div class="col">
+    
+    </div>
+    <div class="col">
+   
+    </div>
+    <div class="col">
+        
+    </div>
+    <div class="col">
+       
+    </div>
+    <div class="col">
+        
+    </div>
+    <div class="col-2">
+        <mat-label>Diff In Pension</mat-label>
+        <input  id="diffInPension" class="input form-control" type=text  formControlName="diffInPension" mat-input>
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+        <h2 style="margin-top:30px">ADD:</h2> 
+    </div>
+    <div class="col">
+        <mat-label>Diff In DCRG</mat-label>
+        <input id="diffInDcrg" class="input form-control" type="text" formControlName="diffInDcrg" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Diff In Commutation</mat-label>
+        <input id="diffCommutation" class="input form-control" type="text" formControlName="diffCommutation" mat-input>
+    </div>
+    <div class="col-2">
+        <mat-label>Total Difference</mat-label>
+        <input id="totalDifference" class="input form-control" type="text" formControlName="totalDifference" mat-input>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-1">
+        <h2 style="margin-top:30px">LESS:</h2> 
+    </div>
+    <div class="col">
+        <mat-label>recovery 1</mat-label>
+        <input id="recoveryOne" class="input form-control" type="text" formControlName="recoveryOne" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>recovery 2</mat-label>
+        <input id="recoveryTwo" class="input form-control" type="text" formControlName="recoveryTwo" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>recovery 3</mat-label>
+        <input id="recoveryThree" class="input form-control" type="text" formControlName="recoveryThree" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>recovery 4</mat-label>
+        <input id="recoveryFour" class="input form-control" type="text" formControlName="recoveryFour" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>recovery 5</mat-label>
+        <input id="recoveryFive" class="input form-control" type="text" formControlName="recoveryFive" mat-input>
+    </div>
+    <div class="col">
+        <mat-label>Total Deduction</mat-label>
+        <input id="totalDeduction" class="input form-control" type="text" formControlName="totalDeduction" mat-input>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-1">
+    
+    </div>
+    <div class="col">
+        
+    </div>
+    <div class="col">
+        
+    </div>
+    <div class="col">
+      
+    </div>
+    <div class="col">
+     
+    </div>
+    <div class="col">
+ 
+    </div>
+    <div class="col">
+        <mat-label>Net Payable</mat-label>
+        <input id="netPayable" class="input form-control" type="text" formControlName="netPayable" mat-input>
+    </div>
+</div>
+
+
+
+</form>
+</div>

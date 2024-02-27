@@ -1,0 +1,221 @@
+<div class="container">
+    <h1 class="settlement">Part A - Settlement Details</h1>
+    <form [formGroup]="settlement">
+        <div class="row">
+            <div class="col-2">
+                <mat-label>Emp id</mat-label>
+                <input id="empId"  type="text" class="input form-control" formControlName="empId" mat-input>
+            </div>
+            <div class="col">
+                <button class="fetch">fetch</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <mat-label >Name</mat-label>
+                <input id="empName"  type="text" class="input form-control" formControlName="empName" mat-input>
+            </div>
+            <div class="col">
+                <mat-label for="designation">Designation</mat-label>
+                <input id="designation" type="text" class="input form-control" formControlName="designation" mat-input>
+            </div>  
+            <div class="col">
+                <mat-label >Office Code</mat-label>
+                <input id="officeCode"type="text" class="input form-control" formControlName="officeCode" mat-input>
+            </div>  
+            <div class="col">
+                <mat-label >DOB</mat-label>
+                <input id="dob" type="date" class="input form-control" formControlName="dob" (change)="calculateAge()" mat-input>
+            </div>
+            <div class="col">
+                <mat-label>DOA</mat-label>
+                <input id="doa" type="text" class="input form-control" formControlName="doa" mat-input>
+            </div>               
+        </div>
+        <div class="row">
+            <div class="col">
+                <mat-label >DOR</mat-label>
+                <input id="dor" type="text" class="input form-control" formControlName="dor" mat-input>
+            </div>
+            <div class="col">
+                <mat-label>Age</mat-label>
+                <input id="age" type="text" class="input form-control" formControlName="age" mat-input>
+            </div>  
+            <div class="col">
+                <mat-label >PPO NO</mat-label>
+                <input id="ppoNo" type="text" class="input form-control" formControlName="ppoNo" mat-input>
+            </div>  
+            <div class="col"></div>
+            <div class="col"></div>               
+        </div>
+<!--         
+<div class="row" *ngFor="let row of rows.controls; let i = index" formArrayName="rows">
+         <div [formControlName]="i" class="row">
+            <div class="col">
+                <mat-label >Settlement arrear from date</mat-label>
+                <input id="arrearStart" type="date" class="input form-control" formControlName="arrearStart" mat-input>
+            </div>
+            <div class="col">
+                <mat-label >Settlement arrear to date</mat-label>
+                <input id="arrearTo" type="date" class="input form-control" formControlName="arrearTo" mat-input>
+            </div>  
+            <div class="col">
+                <mat-label >basic pension</mat-label>
+                <input id="basicPension" type="text" class="input form-control" formControlName="basicPension" mat-input>
+            </div>  
+            <div class="col">
+                <mat-label >commuted pension</mat-label>
+                <input id="commutedPension" type="text" class="input form-control" formControlName="commutedPension" mat-input>
+            </div>
+            <div class="col">
+                <mat-label>pension payable</mat-label>
+                <input id="pensionPayable" type="text" class="input form-control" formControlName="pensionPayable" mat-input>
+            </div> 
+            <div  class="addButton col">
+                <button mat-button color="primary" (click)="addPaymentRow()" *ngIf="i<1">
+                    <mat-icon>add_circle</mat-icon>
+                </button>
+                
+            </div> 
+         
+                       
+    </div> 
+</div> -->
+<div class="row" formArrayName="rows">
+    <div *ngFor="let row of rows.controls; let i = index" [formGroupName]="i" class="row">
+        <div class="col">
+            <mat-label>Settlement Arrear From Date</mat-label>
+            <input id="arrearStart" type="date" class="input form-control" formControlName="arrearStart" mat-input>
+        </div>
+        <div class="col">
+            <mat-label>Settlement Arrear To Date</mat-label>
+            <input id="arrearTo" type="date" class="input form-control" formControlName="arrearTo" mat-input>
+        </div>
+        <div class="col">
+            <mat-label>Basic Pension</mat-label>
+            <input id="basicPension" type="text" class="input form-control" formControlName="basicPension" mat-input>
+        </div>
+        <div class="col">
+            <mat-label>Commuted Pension</mat-label>
+            <input id="commutedPension" type="text" class="input form-control" formControlName="commutedPension" mat-input>
+        </div>
+        <div class="col">
+            <mat-label>Pension Payable</mat-label>
+            <input id="pensionPayable" type="text" class="input form-control" formControlName="pensionPayable" mat-input>
+        </div>
+        <div class="col">
+            <button class="addButton" mat-button color="primary" (click)="addPaymentRow()" *ngIf="i<1">
+                <mat-icon>add_circle</mat-icon>
+            </button>
+            <button  class="deleteButton" mat-icon-button color="warn" (click)="removePaymentRow(i)" *ngIf="i>0">
+                <mat-icon>delete</mat-icon>
+              </button>
+        </div>
+    </div>
+</div>
+
+             <h1 class="settlement">Part B - Settlement Calculation</h1> 
+    <div class="row">
+        <div class="col-1">
+            <h2 style="margin-top: 35px;">PENSION:</h2> 
+        </div> 
+        <div class="col-2">
+            <mat-label>Total Pension Payable</mat-label>
+            <input id="totalPensionPayable"  class="input form-control" type="text" formControlName="totalPensionPayable" mat-input >
+        </div>
+        <div class="col-2">
+            <mat-label>Additional Pension</mat-label>
+            <input id="additionalPension" class="input form-control" type="text" formControlName="additionalPension" mat-input >
+        </div>
+        <div class="col-2">
+            <mat-label>DA</mat-label>
+            <input id="da" class="input form-control" type="text" formControlName="da" mat-input >
+        </div>
+        <div class="col-2">
+            <mat-label>MA</mat-label>
+            <input id="ma" class="input form-control" type="text" formControlName="ma" mat-input >
+        </div>
+        <div class="col-2">
+            <mat-label>Gross Pension</mat-label>
+            <input id="grossPension" class="input form-control" type="text" formControlName="grossPension" mat-input >
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-1">
+            <h2 style="margin-top: 35px;">ADD:</h2> 
+        </div> 
+        <div class="col-4">
+        <mat-label>DCRG</mat-label>
+        <input id="dcrg" class="input form-control" type="text" formControlName="dcrg" mat-input >
+       </div>
+       <div class="col-4">
+       <mat-label>COMMUTATION</mat-label>
+       <input id="commutation" class="input form-control" type="text" formControlName="commutation" mat-input >
+       </div>
+       <div class="col-2">
+            
+        <mat-label>Total Amount</mat-label>
+        <input id="totalAmount" class="input form-control" type="text" formControlName="totalAmount" mat-input >
+        </div>
+        <div class="row">
+            <div class="col"></div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <h2 style="margin-top: 35px;">LESS:</h2> 
+        </div>
+        <div class="col-2">
+          <mat-label>Recovery 1</mat-label>
+          <input id="recoveryOne" class="input form-control" type="text" formControlName="recoveryOne" mat-input >
+       </div>
+        <div class="col-2">
+          <mat-label>Recovery 2</mat-label>
+         <input id="recoveryTwo" class="input form-control" type="text" formControlName="recoveryTwo" mat-input >
+       </div>
+       <div class="col-2">
+        <mat-label>Recovery 3</mat-label>
+        <input id="recoveryThree" class="input form-control" type="text" formControlName="recoveryThree" mat-input >
+        </div>
+        <div class="col-2">
+            <mat-label>Recovery 4</mat-label>
+            <input id="recoveryFour" class="input form-control" type="text" formControlName="recoveryFour" mat-input >
+            </div>
+        <!-- <div class="col-2">
+                <mat-label>recovery 5</mat-label>
+                <input id="" class="input form-control" type="text" formControlName="" mat-input >
+        </div> -->
+         <div class="col-2">
+            <mat-label>Total Recoveries</mat-label>
+            <input id="totalRecoveries" class="input form-control" type="text" formControlName="totalRecoveries" mat-input >
+        </div>
+      
+    </div>
+   
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-2">
+            
+        <mat-label>Net Payable</mat-label>
+        <input id="netPayable" class="input form-control" type="text" formControlName="netPayable" mat-input >
+        </div>
+    </div>
+   
+    
+    </form>
+
+
+
+</div>
+<main></main>

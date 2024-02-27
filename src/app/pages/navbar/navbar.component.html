@@ -1,0 +1,130 @@
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar  class="example-toolbar">
+    <button mat-icon-button open="true" (click)="snav.toggle()" ><mat-icon>menu</mat-icon></button>
+    
+    <ul><li class="searchbox">
+      <div class="search-container">
+        <div>
+          <input  matInput #input type="text"  
+            class="search-input" placeholder="Search Emp Id/Name">
+          <div class="search-icon">
+            <mat-icon >search</mat-icon>
+          </div>
+        </div>
+      </div>
+    </li>
+  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell size" viewBox="0 0 16 16">
+    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+  </svg></li>
+  <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle size" viewBox="0 0 16 16">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+  </svg></li>
+  </ul>
+   </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container"
+                        [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" opened="true"
+                [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+        <!-- <mat-list-item  class="sidebartextcontent" >
+          <button routerLink="personaldetails" routerLinkActive="active" mat-button>
+            <mat-icon> insert_chart</mat-icon>PENSIONER DATA
+        </button>
+        </mat-list-item> -->
+      
+       <mat-expansion-panel class="custom-expansion-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title   >
+              <mat-icon>add_box</mat-icon> PENSIONER DATA
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+        
+          <mat-list>
+            <mat-list-item>
+              <button routerLink="workingsheet"  routerLinkActive="active" mat-button>
+                <mat-icon>add_box</mat-icon>
+                SETTLEMENT
+              </button>
+            </mat-list-item>
+            <mat-list-item>
+              <button routerLink="payment-settlement"  routerLinkActive="active" mat-button>
+                <mat-icon>add_box</mat-icon>
+                PENSION
+              </button>
+            </mat-list-item>
+            <mat-list-item>
+              <button routerLink="arrear-screen1"  routerLinkActive="active" mat-button>
+                <mat-icon>add_box</mat-icon>
+                ARREAR
+              </button>
+            </mat-list-item>
+            <!-- <mat-list-item>
+              <button routerLink="" routerLinkActive="active" mat-button>
+                <mat-icon>add_box</mat-icon>
+                ARREAR
+              </button>
+            </mat-list-item> -->
+           </mat-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="custom-expansion-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon>add_box</mat-icon>
+            CALCULATION
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+        
+          <mat-list>
+            <mat-list-item>
+              <button   routerLinkActive="active" mat-button>
+                <mat-icon>add_box</mat-icon>
+               DA
+              </button>
+            </mat-list-item>
+            <mat-list-item>
+              <button  routerLinkActive="active" mat-button>
+                <mat-icon>add_box</mat-icon>
+              INCOME TAX
+              </button>
+            </mat-list-item>
+            <mat-list-item>
+              <button routerLink="arrear-screen3" routerLinkActive="active" mat-button>
+                <mat-icon>add_box</mat-icon>
+               COMMON FIELDS
+              </button>
+            </mat-list-item>
+          </mat-list>
+        </mat-expansion-panel> 
+        <mat-expansion-panel class="custom-expansion-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon>add_box</mat-icon>
+            
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+        
+          <mat-list>
+            <mat-list-item>
+              <button   routerLinkActive="active" mat-button>
+                <mat-icon>add_box</mat-icon>
+               RA
+              </button>
+            </mat-list-item>
+           
+          </mat-list>
+        </mat-expansion-panel> 
+       
+       
+      </mat-nav-list>
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
