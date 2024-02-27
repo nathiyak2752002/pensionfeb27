@@ -5,40 +5,40 @@ import html2canvas from 'html2canvas';
 import * as XLSX from 'xlsx';
 export interface PeriodicElement {
   position:number;
-  employeeID:number;
+  ppoNo:String;
   name: string;
   designation:string;
   officeCode:string;
-  ppoNo:String;
-  totalAmount:Number;
-  totalRecoveries:Number;
-  netPayable: Number;
+  pentionType:string;
+  grossPension:Number;
+  totalDeduction: Number;
+  netPension:string;
   action:string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
     position:1,
-    employeeID:275,
+    ppoNo:'455',
     name: 'Dhiya',
     designation:'manager',
     officeCode:'4545',
-    ppoNo:'455',
-    totalAmount:466,
-    totalRecoveries:4662,
-    netPayable: 566,
+    pentionType:'',
+    grossPension:4662,
+    totalDeduction: 566,
+    netPension:'',
     action:'update'
   },
   {
     position:2,
-    employeeID:275,
+    ppoNo:'455',
     name: 'Dhiya',
     designation:'manager',
     officeCode:'4545',
-    ppoNo:'455',
-    totalAmount:466,
-    totalRecoveries:4662,
-    netPayable: 566,
+    pentionType:'',
+    grossPension:4662,
+    totalDeduction: 566,
+    netPension:'',
     action:'update'
   }
   

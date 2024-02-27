@@ -53,7 +53,7 @@
     
             <ng-container matColumnDef="employeeID">
               <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span>PPO NO</span></th>
-              <td mat-cell *matCellDef="let element"> {{element.employeeID}} </td>
+              <td mat-cell *matCellDef="let element"> {{element.ppoNo}} </td>
             </ng-container>
   
             <ng-container matColumnDef="name">
@@ -76,20 +76,20 @@
   
             <ng-container matColumnDef="ppoNo">
                 <th  class="headerdesign" mat-header-cell *matHeaderCellDef><span>Type Of Pension</span> </th>
-                <td mat-cell *matCellDef="let element"> {{element.ppoNo}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.pentionType}} </td>
               </ng-container> 
               
               <ng-container matColumnDef="totalAmount">
                 <th  class="headerdesign" mat-header-cell *matHeaderCellDef><span>Gross Pension  </span></th>
-                <td mat-cell *matCellDef="let element"> {{element.totalAmount}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.grossPension}} </td>
               </ng-container> 
               <ng-container matColumnDef="totalRecoveries">
                 <th  class="headerdesign" mat-header-cell *matHeaderCellDef><span>Total Deduction</span> </th>
-                <td mat-cell *matCellDef="let element"> {{element.totalRecoveries}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.totalDeduction}} </td>
               </ng-container>
               <ng-container matColumnDef="netPayable">
                 <th  class="headerdesign" mat-header-cell *matHeaderCellDef><span>Net Pension</span> </th>
-                <td mat-cell *matCellDef="let element"> {{element.netPayable}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.netPension}} </td>
               </ng-container>
   <ng-container matColumnDef="action">
     <th class="headerdesign" mat-header-cell *matHeaderCellDef style="border-bottom-right-radius: 20px; border-top-right-radius:20px">

@@ -47,23 +47,23 @@
             </ng-container>
             <ng-container matColumnDef="date">
                 <th mat-header-cell *matHeaderCellDef><span>PPO NO</span></th>
-                <td mat-cell *matCellDef="let element">{{element.date}}</td>
+                <td mat-cell *matCellDef="let element">{{element.ppoNo}}</td>
             </ng-container>
             <ng-container matColumnDef="voucherNo" >
                 <th mat-header-cell *matHeaderCellDef><span>Name</span></th>
-                <td mat-cell *matCellDef="let element">{{element.voucherNo}}</td>
+                <td mat-cell *matCellDef="let element">{{element.name}}</td>
             </ng-container>
             <ng-container  matColumnDef="totalPay">
                 <th mat-header-cell *matHeaderCellDef><span>Designation</span></th>
-                <td mat-cell *matCellDef="let element">{{element.totalPay}}</td>
+                <td mat-cell *matCellDef="let element">{{element.designation}}</td>
             </ng-container>
             <ng-container matColumnDef="totalDeductions">
                 <th mat-header-cell *matHeaderCellDef><span>Office Code</span></th>
-                <td mat-cell *matCellDef="let element">{{element.totalDeductions}}</td>
+                <td mat-cell *matCellDef="let element">{{element.officeCode}}</td>
             </ng-container>
             <ng-container matColumnDef="netPayable">
                 <th mat-header-cell *matHeaderCellDef><span>Total Difference Pension</span></th>
-                <td mat-cell *matCellDef="let element">{{element.netPayable}}</td>
+                <td mat-cell *matCellDef="let element">{{element.netDiffPension}}</td>
             </ng-container>
             <ng-container matColumnDef="deduction">
                 <th mat-header-cell *matHeaderCellDef><span>Total Deduction</span></th>
