@@ -3,6 +3,16 @@ main{
     height: 100vh;
    
 }
+.newemployee{
+  padding: 0.5rem 0.5rem;
+  /* background-color: #fff; */
+  border-radius: 1rem;
+  background-color: #470A3C;
+  color: #fff;
+  font-size:10px;
+  margin-left:7px;
+  
+  }
 .card1
 {
     margin-top:-0.5px;

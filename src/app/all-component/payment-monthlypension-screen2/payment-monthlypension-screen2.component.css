@@ -11,12 +11,12 @@ main{
   margin-right:10px;
   margin-left:10px;
 }
-/* .card2{
+.card2{
 
-margin-top: 5px;
+margin-top: 10px;
 margin-right:10px;
 margin-left:10px;
-} */
+}
 
 .tablecolor th {
     background-color:#470A3C;
@@ -30,6 +30,13 @@ margin-left:10px;
     background-color: #470A3C ;
     border-radius: 1rem;
     color:white;
+}
+.submit1{
+  padding: 5px;
+  background-color: #470A3C ;
+  border-radius: 1rem;
+  color:white;
+  margin-top: 40px;
 }
 .submit{
   padding: 5px;

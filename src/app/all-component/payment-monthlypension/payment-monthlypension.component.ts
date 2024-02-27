@@ -8,8 +8,7 @@ export interface settlement{
   date:string;
   voucherNo:number;
   totalPay:number;
-  totalDeductions:number;
-  netPayable:number;
+  
   action:string;
 }
 const  ELEMENT_DATA:settlement[] = [
@@ -18,8 +17,7 @@ const  ELEMENT_DATA:settlement[] = [
   date:'27/05/2023',
   voucherNo:4563,
   totalPay:45000,
-  totalDeductions:56000,
-  netPayable:16000,
+
   action:'update'
 },
 {
@@ -27,8 +25,7 @@ const  ELEMENT_DATA:settlement[] = [
   date:'23/09/2023',
   voucherNo:4563,
   totalPay:46000,
-  totalDeductions:86000,
-  netPayable:16000,
+  
   action:'update'
 }
 ]
@@ -39,7 +36,7 @@ const  ELEMENT_DATA:settlement[] = [
 })
 export class PaymentMonthlypensionComponent {
   dataSource = new MatTableDataSource<settlement>(ELEMENT_DATA);
-  displayedColumns: string[] = ['position', 'date', 'voucherNo', 'totalPay', 'totalDeductions', 'netPayable', 'action'];
+  displayedColumns: string[] = ['position', 'date', 'voucherNo', 'totalPay',  'action'];
   @ViewChild('content', { static: false }) content!: ElementRef;
   
   downloadPDF(): void {

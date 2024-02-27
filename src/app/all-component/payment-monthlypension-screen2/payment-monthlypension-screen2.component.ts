@@ -6,30 +6,24 @@ import * as jspdf from 'jspdf';
 import html2canvas from 'html2canvas'; 
 export interface settlement{
   position:number;
-  ppoNo:number;
+  ppoNo:string;
   name:string;
-  totalPay:number;
-  totalDeductions:number;
-  netPayable:number;
+  totalPay:string;
   action:string;
 }
 const  ELEMENT_DATA:settlement[] = [
 {
   position:1,
-  ppoNo:45245,
-  name:'dhiya',
-  totalPay:45000,
-  totalDeductions:56000,
-  netPayable:16000,
+  ppoNo:'',
+  name:'',
+  totalPay:'',
   action:'update'
 },
 {
   position:2,
-  ppoNo:45638,
-  name:'Nancy',
-  totalPay:46000,
-  totalDeductions:86000,
-  netPayable:16000,
+  ppoNo:'',
+  name:'',
+  totalPay:'',
   action:'update'
 }
 ]
@@ -42,7 +36,7 @@ const  ELEMENT_DATA:settlement[] = [
 })
 export class PaymentMonthlypensionScreen2Component {
   dataSource = new MatTableDataSource<settlement>(ELEMENT_DATA);
-  displayedColumns: string[] = ['position', 'ppoNo', 'name', 'totalPay', 'totalDeductions', 'netPayable', 'action'];
+  displayedColumns: string[] = ['position', 'ppoNo', 'name', 'totalPay',  'action'];
   @ViewChild('content', { static: false }) content!: ElementRef;
   
 settlement!:FormGroup;
@@ -52,7 +46,8 @@ settlement!:FormGroup;
   ngOnInit(): void {
     this.settlement=this.fb.group({
     vrno:['',Validators.required],
-    date:['',Validators.required]
+    date:['',Validators.required],
+    date1:['',Validators.required],
   });
 }
 
