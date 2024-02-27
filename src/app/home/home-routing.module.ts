@@ -13,6 +13,7 @@ import { PaymentMonthlypensionScreen2Component } from '../all-component/payment-
 import { ArrearScreen1Component } from '../all-component/arrear-screen1/arrear-screen1.component';
 import { ArrearScreen2Component } from '../all-component/arrear-screen2/arrear-screen2.component';
 import { ArrearScreen3Component } from '../all-component/arrear-screen3/arrear-screen3.component';
+import { IncomeTaxComponent } from '../all-component/income-tax/income-tax.component'; 
 
 const routes: Routes = [
   {
@@ -30,7 +31,8 @@ const routes: Routes = [
     { path: 'payment-monthlypension-screen2', component: PaymentMonthlypensionScreen2Component },
     { path: 'arrear-screen1', component: ArrearScreen1Component },
     { path: 'arrear-screen2', component: ArrearScreen2Component },
-    { path: 'arrear-screen3', component: ArrearScreen3Component }
+    { path: 'arrear-screen3', component: ArrearScreen3Component },
+    { path: 'income-tax', component: IncomeTaxComponent },
     ]
   }
 ];

@@ -9,10 +9,12 @@ import { PensionService } from './services/pensionservice.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+  
   
 
 

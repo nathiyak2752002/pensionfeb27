@@ -20,6 +20,7 @@ import { ArrearScreen2Component } from '../all-component/arrear-screen2/arrear-s
 import { ArrearScreen3Component } from '../all-component/arrear-screen3/arrear-screen3.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { IncomeTaxComponent } from '../all-component/income-tax/income-tax.component'; 
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -35,6 +36,8 @@ import { MatSelectModule } from '@angular/material/select';
     ArrearScreen1Component,
     ArrearScreen2Component,
     ArrearScreen3Component,
+    IncomeTaxComponent
+   
     
 
   ],
