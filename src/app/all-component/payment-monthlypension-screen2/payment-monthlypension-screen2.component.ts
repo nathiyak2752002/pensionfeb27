@@ -6,26 +6,28 @@ import * as jspdf from 'jspdf';
 import html2canvas from 'html2canvas'; 
 export interface settlement{
   position:number;
-  ppoNo:string;
-  name:string;
-  totalPay:string;
+  daFrom:string;
+  daTo:string;
+  daValues:string;
   action:string;
 }
 const  ELEMENT_DATA:settlement[] = [
 {
   position:1,
-  ppoNo:'',
-  name:'',
-  totalPay:'',
+  daFrom:'123',
+  daTo:'1542',
+  daValues:'454',
   action:'update'
+
 },
 {
   position:2,
-  ppoNo:'',
-  name:'',
-  totalPay:'',
+  daFrom:'123',
+  daTo:'1542',
+  daValues:'454',
   action:'update'
 }
+
 ]
 
 
@@ -39,15 +41,15 @@ export class PaymentMonthlypensionScreen2Component {
   displayedColumns: string[] = ['position', 'ppoNo', 'name', 'totalPay',  'action'];
   @ViewChild('content', { static: false }) content!: ElementRef;
   
-settlement!:FormGroup;
+da!:FormGroup;
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.settlement=this.fb.group({
-    vrno:['',Validators.required],
-    date:['',Validators.required],
-    date1:['',Validators.required],
+    this.da=this.fb.group({
+      daFrom:['',Validators.required],
+      daTo:['',Validators.required],
+      da:['',Validators.required],
   });
 }
 

@@ -40,9 +40,9 @@ export class IncomeTaxComponent {
 
   ngOnInit(): void {
     this.incomeTax=this.fb.group({
-    vrno:['',Validators.required],
-    date:['',Validators.required],
-    date1:['',Validators.required],
+      itFrom:['',Validators.required],
+      itTo:['',Validators.required],
+      itValues:['',Validators.required],
   });
 }
 

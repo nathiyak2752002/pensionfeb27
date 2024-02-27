@@ -5,28 +5,26 @@ import html2canvas from 'html2canvas';
 import * as XLSX from 'xlsx';
 export interface settlement{
   position:number;
-  date:string;
-  voucherNo:number;
-  totalPay:number;
-  
+  empId:string;
+  name:string;
+  basicPay:string;
   action:string;
 }
 const  ELEMENT_DATA:settlement[] = [
 {
   position:1,
-  date:'27/05/2023',
-  voucherNo:4563,
-  totalPay:45000,
-
-  action:'update'
+  empId:'2652',
+  name:'dhiya',
+  basicPay:'216',
+   action:'update'
 },
 {
   position:2,
-  date:'23/09/2023',
-  voucherNo:4563,
-  totalPay:46000,
+  empId:'2652',
+  name:'joe',
+  basicPay:'216',
+   action:'update'
   
-  action:'update'
 }
 ]
 @Component({

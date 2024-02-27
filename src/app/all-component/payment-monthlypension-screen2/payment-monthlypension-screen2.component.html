@@ -29,22 +29,22 @@
         <!-- </div> -->
         
       
-      <form [formGroup]="settlement">
+      <form [formGroup]="da">
         <div class="row">
             <div class="col-1">
                 <h2 style="margin-top: 40px; margin-left: 30px;">DA</h2>
             </div>
             <div class="col-2">
                 <mat-label>DA From(Rs)</mat-label>
-                <input id="vrno" class="input form-control"  type="date" formControlName="vrno" mat-input>
+                <input id="daFrom" class="input form-control"  type="date" formControlName="daFrom" mat-input>
             </div>   
             <div class="col-2">
                 <mat-label>DA To(Rs)</mat-label>
-                <input id="date" class="input form-control"  type="date" formControlName="date" mat-input>
+                <input id="daTo" class="input form-control"  type="date" formControlName="daTo" mat-input>
            </div>    
            <div class="col-2">
             <mat-label>DA%(Rs)</mat-label>
-            <input id="date1" class="input form-control"  type="text" formControlName="date1" mat-input>
+            <input id="da" class="input form-control"  type="text" formControlName="da" mat-input>
             </div>  
             <div class="col-2">
                
@@ -62,15 +62,15 @@
             </ng-container>
             <ng-container matColumnDef="ppoNo">
                 <th mat-header-cell *matHeaderCellDef><span>DA From</span></th>
-                <td mat-cell *matCellDef="let element">{{element.ppoNo}}</td>
+                <td mat-cell *matCellDef="let element">{{element.daFrom}}</td>
             </ng-container>
             <ng-container matColumnDef="name" >
                 <th mat-header-cell *matHeaderCellDef><span>DA To</span></th>
-                <td mat-cell *matCellDef="let element">{{element.name}}</td>
+                <td mat-cell *matCellDef="let element">{{element.daTo}}</td>
             </ng-container>
             <ng-container  matColumnDef="totalPay">
                 <th mat-header-cell *matHeaderCellDef><span>DA Values</span></th>
-                <td mat-cell *matCellDef="let element">{{element.totalPay}}</td>
+                <td mat-cell *matCellDef="let element">{{element.daValues}}</td>
             </ng-container>
           
             <ng-container matColumnDef="action">
