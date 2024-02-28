@@ -5,7 +5,6 @@ import { NavbarComponent } from '../pages/navbar/navbar.component';
 import { PersonaldetailsComponent } from '../all-component/personaldetails/personaldetails.component';
 import { MaterialModule } from '../shared/material.module';
 import { OngoingPersonnelDetailsComponent } from '../all-component/ongoing-personnel-details/ongoing-personnel-details.component';
-
 import { MatInputModule } from '@angular/material/input';
 import { WorkingsheetComponent } from '../all-component/workingsheet/workingsheet.component';
 import { WorkingsheetSettlementComponent } from '../all-component/workingsheet-settlement/workingsheet-settlement.component';
@@ -21,6 +20,8 @@ import { ArrearScreen3Component } from '../all-component/arrear-screen3/arrear-s
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { IncomeTaxComponent } from '../all-component/income-tax/income-tax.component'; 
+import { PensionPaymentComponent } from '../all-component/pension-payment/pension-payment.component';
+import { VoucherListComponent } from '../all-component/voucher-list/voucher-list.component';
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -36,7 +37,9 @@ import { IncomeTaxComponent } from '../all-component/income-tax/income-tax.compo
     ArrearScreen1Component,
     ArrearScreen2Component,
     ArrearScreen3Component,
-    IncomeTaxComponent
+    IncomeTaxComponent,
+    PensionPaymentComponent,
+    VoucherListComponent
    
     
 

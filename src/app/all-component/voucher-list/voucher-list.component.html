@@ -1,0 +1,187 @@
+<div class="container">
+<h2>Voucher  Details</h2>
+<form  [formGroup]="voucher">
+    <div class="row">
+        <div class="col-2">
+            <mat-label>Voucher No</mat-label>
+            <input id="voucherNo" class="input form-control" type="text"  formControlName="voucherNo" mat-input>
+        </div>
+        <div class="col-2">
+            <mat-label>ppo no</mat-label>
+             <select class="input form-select" id="ppo" formControlName="ppo" >
+                    <option value="">001</option>
+                    <option value="">002</option>
+                    <option value="">003</option>
+                    <option value="">004</option>
+             </select>
+        </div>
+    </div>
+    <div  class="row">
+        <div class="col-2">
+            <mat-label>Pension Payment</mat-label>
+             <select class="input form-select" id="pensionPayment" formControlName="pensionPayment" type="text" mat-input [(ngModel)]="selectType">
+                    <option value="Settlement">Settlement</option>
+                    <option value="Arrear">Arrear</option>
+                    <option value="Pension">Pension</option>
+             </select>
+        </div>
+    </div>
+</form>
+<div  *ngIf="selectType === 'Settlement'">
+    <div  #content class="card card2 tablecolor">
+        <table mat-table [dataSource]="voucherTable1" class="mat-elevation-z8">
+    
+            
+            <ng-container matColumnDef="position">
+              <th class="headerdesign" mat-header-cell *matHeaderCellDef style="border-top-left-radius: 20px; border-bottom-left-radius:20px"> <span> No</span> </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="ppo">
+              <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span></span>PPO No</th>
+              <td mat-cell *matCellDef="let element"> {{element.ppo}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="name">
+                <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span>Name</span> </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+              </ng-container>
+          
+          
+            <ng-container matColumnDef="grossPension">
+              <th   class="headerdesign" mat-header-cell *matHeaderCellDef><span>Gross Pension</span></th>
+              <td mat-cell *matCellDef="let element"> {{element.grossPension}} </td>
+            </ng-container>
+          
+           
+            <ng-container matColumnDef="totalDeduction">
+              <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span>Total Deduction</span></th>
+              <td mat-cell *matCellDef="let element"> {{element.totalDeduction}}</td>
+            </ng-container>
+           
+    
+            <ng-container matColumnDef="netPension">
+                <th  class="headerdesign" mat-header-cell *matHeaderCellDef><span>Net Pension</span> </th>
+                <td mat-cell *matCellDef="let element"> {{element.netPension}} </td>
+              </ng-container> 
+              
+              
+    
+    
+        
+            <tr mat-header-row  *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+       
+    </div>
+</div>
+
+<div *ngIf= "selectType === 'Arrear'">
+    <div  #content class="card card2 tablecolor">
+        <table mat-table [dataSource]="voucherTable2" class="mat-elevation-z8">
+    
+            
+            <ng-container matColumnDef="position">
+              <th class="headerdesign" mat-header-cell *matHeaderCellDef style="border-top-left-radius: 20px; border-bottom-left-radius:20px"> <span> No</span> </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="ppo">
+              <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span></span>PPO No</th>
+              <td mat-cell *matCellDef="let element"> {{element.ppo}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="name">
+                <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span>Name</span> </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+              </ng-container>
+          
+          
+            <ng-container matColumnDef="grossPension">
+              <th   class="headerdesign" mat-header-cell *matHeaderCellDef><span>Total Difference</span></th>
+              <td mat-cell *matCellDef="let element"> {{element.grossPension}} </td>
+            </ng-container>
+          
+           
+            <ng-container matColumnDef="totalDeduction">
+              <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span>Total Deduction</span></th>
+              <td mat-cell *matCellDef="let element"> {{element.totalDeduction}}</td>
+            </ng-container>
+           
+    
+            <ng-container matColumnDef="netPension" style="border-bottom-right-radius: 20px; border-top-right-radius:20px">
+                <th  class="headerdesign" mat-header-cell *matHeaderCellDef><span>Net Payable</span> </th>
+                <td mat-cell *matCellDef="let element"> {{element.netPension}} </td>
+              </ng-container> 
+              
+              
+    
+    
+        
+            <tr mat-header-row  *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+       
+    </div>
+</div>
+
+<div *ngIf= "selectType === 'Pension'">
+    <div  #content class="card card2 tablecolor">
+        <table mat-table [dataSource]="voucherTable3" class="mat-elevation-z8">
+    
+            
+            <ng-container matColumnDef="position">
+              <th class="headerdesign" mat-header-cell *matHeaderCellDef style="border-top-left-radius: 20px; border-bottom-left-radius:20px"> <span> No</span> </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="ppo">
+              <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span></span>PPO No</th>
+              <td mat-cell *matCellDef="let element"> {{element.ppo}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="name">
+                <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span>Name</span> </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+              </ng-container>
+          
+          
+            <ng-container matColumnDef="grossPension">
+              <th   class="headerdesign" mat-header-cell *matHeaderCellDef><span>Total Amount</span></th>
+              <td mat-cell *matCellDef="let element"> {{element.grossPension}} </td>
+            </ng-container>
+          
+           
+            <ng-container matColumnDef="totalDeduction">
+              <th  class="headerdesign" mat-header-cell *matHeaderCellDef> <span>Total Recoveries</span></th>
+              <td mat-cell *matCellDef="let element"> {{element.totalDeduction}}</td>
+            </ng-container>
+           
+    
+            <ng-container matColumnDef="netPension" style="border-bottom-right-radius: 20px; border-top-right-radius:20px">
+                <th  class="headerdesign" mat-header-cell *matHeaderCellDef><span>Net Payable</span> </th>
+                <td mat-cell *matCellDef="let element"> {{element.netPension}} </td>
+            </ng-container>
+              
+              
+    
+    
+        
+            <tr mat-header-row  *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+       
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>

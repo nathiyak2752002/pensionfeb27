@@ -14,6 +14,8 @@ import { ArrearScreen1Component } from '../all-component/arrear-screen1/arrear-s
 import { ArrearScreen2Component } from '../all-component/arrear-screen2/arrear-screen2.component';
 import { ArrearScreen3Component } from '../all-component/arrear-screen3/arrear-screen3.component';
 import { IncomeTaxComponent } from '../all-component/income-tax/income-tax.component'; 
+import { PensionPaymentComponent } from '../all-component/pension-payment/pension-payment.component';
+import { VoucherListComponent } from '../all-component/voucher-list/voucher-list.component';
 
 const routes: Routes = [
   {
@@ -33,6 +35,8 @@ const routes: Routes = [
     { path: 'arrear-screen2', component: ArrearScreen2Component },
     { path: 'arrear-screen3', component: ArrearScreen3Component },
     { path: 'income-tax', component: IncomeTaxComponent },
+    {path:'pension-payment',component:PensionPaymentComponent},
+    {path:'voucher-list',component:VoucherListComponent}
     ]
   }
 ];
