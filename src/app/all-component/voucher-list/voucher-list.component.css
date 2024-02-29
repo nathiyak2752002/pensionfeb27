@@ -39,4 +39,11 @@ color: #470A3C;
   line-height: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.alignMent{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

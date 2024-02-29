@@ -7,7 +7,6 @@ export interface PeriodicElement {
   position:number;
   date:string;
   voucher: string;
- 
   totalPayment:number;
   totalRecoveries:Number;
   netPayable: Number;
@@ -19,21 +18,19 @@ const ELEMENT_DATA: PeriodicElement[] = [
     position:1,
     date:'27/5/2002',
     voucher:'001',
-    
     totalPayment:1000,
     totalRecoveries:20000,
     netPayable: 4845,
-    action:''
+    action:'UPDATE'
   },
   {
     position:2,
     date:'23/9/2001',
     voucher:'002',
-    
     totalPayment:1000,
     totalRecoveries:20000,
     netPayable: 4845,
-    action:''
+    action:'UPDATE'
   }
   
 ];

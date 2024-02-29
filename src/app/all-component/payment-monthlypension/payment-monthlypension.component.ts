@@ -5,27 +5,26 @@ import html2canvas from 'html2canvas';
 import * as XLSX from 'xlsx';
 export interface settlement{
   position:number;
-  empId:string;
+  ppoNo:string;
   name:string;
-  basicPay:string;
+  recoveries:string;
+  totalDemand:string;
+  month:string;
+  monthlyPension:string;
   action:string;
 }
 const  ELEMENT_DATA:settlement[] = [
 {
   position:1,
-  empId:'2652',
+  ppoNo:'484',
   name:'dhiya',
-  basicPay:'216',
-   action:'update'
+  recoveries:'',
+  totalDemand:'',
+  month:'',
+  monthlyPension:'',
+  action:'update'
 },
-{
-  position:2,
-  empId:'2652',
-  name:'joe',
-  basicPay:'216',
-   action:'update'
-  
-}
+
 ]
 @Component({
   selector: 'app-payment-monthlypension',
@@ -34,7 +33,7 @@ const  ELEMENT_DATA:settlement[] = [
 })
 export class PaymentMonthlypensionComponent {
   dataSource = new MatTableDataSource<settlement>(ELEMENT_DATA);
-  displayedColumns: string[] = ['position', 'date', 'voucherNo', 'totalPay',  'action'];
+  displayedColumns: string[] = ['position', 'ppoNo','name','recoveries','totalDemand','month','monthlyPension',  'action'];
   @ViewChild('content', { static: false }) content!: ElementRef;
   
   downloadPDF(): void {

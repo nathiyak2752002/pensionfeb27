@@ -10,7 +10,7 @@ export interface PeriodicElement {
   grossPension:number;
   totalDeduction:number;
   netPension:number;
- 
+  action:string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
@@ -20,7 +20,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     name:'dhiya',
     grossPension:4549,
     totalDeduction:4878,
-    netPension:7878
+    netPension:7878,
+    action:'update'
   },
   {
     position:2,
@@ -28,7 +29,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     name:'dhiya',
     grossPension:4549,
     totalDeduction:4878,
-    netPension:7878
+    netPension:7878,
+    action:''
   }
   
 ];
@@ -40,15 +42,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class VoucherListComponent {
 
-  selectType!: string;
- 
+  // selectType!: string;
+  selectType: string = 'Settlement'; 
 
   voucherTable1= new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  displayedColumns: string[] = ['position','ppo','name','grossPension','totalDeduction','netPension'];
+  displayedColumns: string[] = ['position','ppo','name','grossPension','totalDeduction','netPension','action'];
   voucherTable2= new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  displayedColumns2: string[] = ['position','ppo','name','grossPension','totalDeduction','netPension'];
+  displayedColumns2: string[] = ['position','ppo','name','grossPension','totalDeduction','netPension','action'];
   voucherTable3= new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  displayedColumns3: string[] = ['position','ppo','name','grossPension','totalDeduction','netPension'];
+  displayedColumns3: string[] = ['position','ppo','name','grossPension','totalDeduction','netPension','action'];
 @ViewChild('content', { static: false }) content!: ElementRef;
 voucher!:FormGroup;
 // selectedRetirementType: any;

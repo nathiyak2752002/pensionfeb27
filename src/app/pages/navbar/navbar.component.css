@@ -7,6 +7,9 @@ mat-sidenav {
 mat-nav-list button{
   color: white;
 }
+mat-toolbar{
+  background-color: #470A3C;
+}
 ul{
   position: absolute;
   right:0;
@@ -44,8 +47,9 @@ margin: 5px;
 }
 
 .example-toolbar{
-  height: 90px;
-  background-color: #ffffff;
+  height: 60px;
+  background-color: #470A3C;
+  color: #ccc;
 }
 .search-icon  mat-icon {
   position: absolute;
@@ -71,6 +75,7 @@ margin: 5px;
   bottom: 0;
   left: 0;
   right: 0;
+
 }
 .example-is-mobile .example-toolbar {
   position: fixed;
@@ -92,7 +97,7 @@ example-spacer {
 }
 
 .main-content {
-  background-color: #FFFAF4;
+  background-color: red;
 }
 
 mat-sidenav {
